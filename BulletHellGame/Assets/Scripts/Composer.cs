@@ -46,11 +46,20 @@ public class Composer : MonoBehaviour
 
     private void ReadTheLines()
     {
+        //float total = 0;
         textArray = assetContent.Split('\n').ToList();
         for (int i = 0; i < 60; i++)
         {
-            Debug.Log(textArray[i]);
+            List<string> textLine = textArray[i].Split(" ").ToList();
+            //Debug.Log(textArray[i]);
+            for(int j = 0; j < textLine.Length, j++)
+            {
+
+            }
+            float num = float.Parse(textArray[i]);
+            //total += num;
         }
         //Debug.Log(asset.text);
+        //Debug.Log(total);
     }
 }
