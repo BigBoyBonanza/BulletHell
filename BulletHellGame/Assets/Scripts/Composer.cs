@@ -10,6 +10,7 @@ public class Composer : MonoBehaviour
     public TextAsset asset;
     private string assetContent;
     public static List<string> textArray;
+    public int frameIndex = 0;
 
     void Awake()
     {
@@ -21,7 +22,7 @@ public class Composer : MonoBehaviour
     private void Start()
     {
         assetContent = asset.text;
-        ReadTheLines();
+        //ReadTheLines();
     }
 
     // Increase the number of calls to Update.
@@ -32,7 +33,8 @@ public class Composer : MonoBehaviour
     // Increase the number of calls to FixedUpdate.
     void FixedUpdate()
     {
-
+        ReadALine(frameIndex);
+        frameIndex++;
     }
 
     IEnumerator Loop()
@@ -48,18 +50,72 @@ public class Composer : MonoBehaviour
     {
         //float total = 0;
         textArray = assetContent.Split('\n').ToList();
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < textArray.Count(); i++)
         {
-            List<string> textLine = textArray[i].Split(" ").ToList();
-            //Debug.Log(textArray[i]);
-            for(int j = 0; j < textLine.Length, j++)
+            Debug.Log("New Row");
+            List<string> textLine = textArray[i].Split(' ').ToList();
+            int size = textLine.Count();
+            for(int j = 0; j < size; j++)
             {
-
+                float num = float.Parse(textLine[j]);
+                //Debug.Log(num);
+                //total += num;
             }
-            float num = float.Parse(textArray[i]);
-            //total += num;
         }
         //Debug.Log(asset.text);
         //Debug.Log(total);
+    }
+
+    private void ReadALine(int index)
+    {
+        textArray = assetContent.Split('\n').ToList();
+        List<string> textLine = textArray[index].Split(' ').ToList();
+        int size = textLine.Count();
+        for (int j = 0; j < size; j++)
+        {
+            float num = float.Parse(textLine[j]);
+            Debug.Log(num);
+            //total += num;
+            if(j == 0)
+            {
+
+            }
+            if (j == 1)
+            {
+
+            }
+            if (j == 2)
+            {
+
+            }
+            if (j == 3)
+            {
+
+            }
+            if (j == 4)
+            {
+
+            }
+            if (j == 5)
+            {
+
+            }
+            if (j == 6)
+            {
+
+            }
+            if (j == 7)
+            {
+
+            }
+            if (j == 8)
+            {
+
+            }
+            if (j == 9)
+            {
+
+            }
+        }
     }
 }
