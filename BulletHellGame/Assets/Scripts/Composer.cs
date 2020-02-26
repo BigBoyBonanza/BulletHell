@@ -112,7 +112,7 @@ public class Composer : MonoBehaviour
             //total += num;
             if(j == 0)
             {
-                if(num > 2)
+                if(num > 6)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner0.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -121,7 +121,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 1)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner1.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -130,7 +130,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 2)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner2.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -139,7 +139,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 3)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner3.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -148,7 +148,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 4)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner4.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -157,7 +157,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 5)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner5.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -166,7 +166,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 6)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner6.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -175,7 +175,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 7)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner7.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -184,7 +184,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 8)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner8.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
@@ -193,7 +193,7 @@ public class Composer : MonoBehaviour
             }
             if (j == 9)
             {
-                if (num > 5)
+                if (num > 8)
                 {
                     GameObject doomSphere = Instantiate(deathBall, spawner9.transform);
                     Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
