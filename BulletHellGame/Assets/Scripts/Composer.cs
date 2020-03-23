@@ -34,6 +34,10 @@ public class Composer : MonoBehaviour
     public GameObject Wave;
     private WavesScript waveScript;
 
+    public GameObject Tide;
+    private TideScript tideScript;
+    
+
     void Awake()
     {
         QualitySettings.vSyncCount = 0;
@@ -41,11 +45,14 @@ public class Composer : MonoBehaviour
         StartCoroutine(Loop());
 
         waveScript = Wave.GetComponent<WavesScript>();
+        tideScript = Tide.GetComponent<TideScript>();
     }
 
     private void Start()
     {
         assetContent = asset.text;
+
+        textArray = assetContent.Split('\n').ToList();
         //ReadTheLines();
         Debug.Log(spawner0.transform.position);
         song.Play();
@@ -113,7 +120,7 @@ public class Composer : MonoBehaviour
 
     private void ReadALine(int index)
     {
-        textArray = assetContent.Split('\n').ToList();
+        //textArray = assetContent.Split('\n').ToList();
         List<string> textLine = textArray[index].Split(' ').ToList();
         int size = textLine.Count();
         for (int j = 0; j < size; j++)
@@ -132,6 +139,8 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner0.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
+
+                waveScript.SetWave(num);
             }
             if (j == 1)
             {
@@ -209,6 +218,7 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner7.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
+
             }
             if (j == 8)
             {
@@ -220,7 +230,6 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner8.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
-                waveScript.SetWave(num);
             }
             if (j == 9)
             {
@@ -232,6 +241,8 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner9.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
+
+                tideScript.SetWave(num);
             }
         }
     }
