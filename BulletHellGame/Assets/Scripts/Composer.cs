@@ -148,7 +148,6 @@ public class Composer : MonoBehaviour
                 }
                 */
 
-                sprinklerScipt.GetNum(num);
             }
             if (j == 1)
             {
@@ -160,6 +159,7 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner1.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
+                sprinklerScipt.GetNum(num);
             }
             if (j == 2)
             {
@@ -193,7 +193,6 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner4.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
-                starSpawningScript.GetNum(num);
             }
             if (j == 5)
             {
@@ -205,6 +204,7 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner5.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
+                starSpawningScript.GetNum(num);
             }
             if (j == 6)
             {
