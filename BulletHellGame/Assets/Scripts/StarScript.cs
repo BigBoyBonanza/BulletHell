@@ -6,6 +6,8 @@ public class StarScript : MonoBehaviour {
 
     public float rotationSpeed = 250f;
 
+    public float lifeTime = 10f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,5 +17,11 @@ public class StarScript : MonoBehaviour {
 	void Update ()
     {
         transform.Rotate(Vector3.up * (rotationSpeed * Time.deltaTime));
+
+        if (lifeTime<=0)
+        {
+            Destroy(gameObject);
+        }
+        lifeTime -= Time.deltaTime;
     }
 }

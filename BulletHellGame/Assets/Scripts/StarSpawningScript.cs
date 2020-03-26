@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class StarSpawningScript : MonoBehaviour {
 
+    public float noiseGap = 1;
+
     public GameObject[] Spawners;
 
     public GameObject Star;
+
+    public float newNum;
+    public float oldNum;
+
+    public int whichSpawner;
 
 	// Use this for initialization
 	void Start ()
@@ -17,18 +24,29 @@ public class StarSpawningScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		
+		if(newNum < oldNum - noiseGap)
+        {
+            whichSpawner = ChoseSpawner();
+            Launch();
+        }
+        oldNum = newNum;
 	}
 
-    public void ChoseSpawner()
+    public void GetNum(float num)
     {
-
+        newNum = num;
     }
 
-    public void Launch(GameObject spawner)
+    public int ChoseSpawner()
     {
-        GameObject star = Instantiate(Star, spawner.transform.position, spawner.transform.rotation);
+        int num = Random.Range(0, Spawners.Length);
+        return num;
+    }
+
+    public void Launch()
+    {
+        GameObject star = Instantiate(Star, Spawners[whichSpawner].transform.position, Spawners[whichSpawner].transform.rotation);
         Rigidbody rb = star.GetComponent<Rigidbody>();
-        rb.AddForce(spawner.transform.forward * 40f, ForceMode.VelocityChange);
+        rb.AddForce(-Spawners[whichSpawner].transform.forward * 10f, ForceMode.VelocityChange);
     }
 }

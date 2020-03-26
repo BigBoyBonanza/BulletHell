@@ -36,7 +36,13 @@ public class Composer : MonoBehaviour
 
     public GameObject Tide;
     private TideScript tideScript;
-    
+
+    public GameObject Falling;
+    private StarSpawningScript starSpawningScript;
+
+    public GameObject Sprink;
+    private SprinklerScirpt sprinklerScipt;
+
 
     void Awake()
     {
@@ -46,6 +52,8 @@ public class Composer : MonoBehaviour
 
         waveScript = Wave.GetComponent<WavesScript>();
         tideScript = Tide.GetComponent<TideScript>();
+        starSpawningScript = Falling.GetComponent<StarSpawningScript>();
+        sprinklerScipt = Sprink.GetComponent<SprinklerScirpt>();
     }
 
     private void Start()
@@ -140,7 +148,7 @@ public class Composer : MonoBehaviour
                 }
                 */
 
-                waveScript.SetWave(num);
+                sprinklerScipt.GetNum(num);
             }
             if (j == 1)
             {
@@ -185,6 +193,7 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner4.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
+                starSpawningScript.GetNum(num);
             }
             if (j == 5)
             {
@@ -218,6 +227,7 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner7.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
+                waveScript.SetWave(num);
 
             }
             if (j == 8)
