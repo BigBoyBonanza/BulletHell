@@ -77,5 +77,13 @@ public class SprinklerScirpt : MonoBehaviour {
         GameObject star = Instantiate(Dot, RightSpawners[whichSpawner].transform.position, RightSpawners[whichSpawner].transform.rotation);
         Rigidbody rb = star.GetComponent<Rigidbody>();
         rb.AddForce(-RightSpawners[whichSpawner].transform.right * 10f, ForceMode.VelocityChange);
+        /*
+        star = Instantiate(Dot, RightSpawners[whichSpawner].transform.position, RightSpawners[whichSpawner].transform.rotation);
+        rb = star.GetComponent<Rigidbody>();
+        rb.AddForce(-RightSpawners[whichSpawner].transform.right + ((-RightSpawners[whichSpawner].transform.forward) * 0.1f) * 10f, ForceMode.VelocityChange);
+        star = Instantiate(Dot, RightSpawners[whichSpawner].transform.position, RightSpawners[whichSpawner].transform.rotation);
+        rb = star.GetComponent<Rigidbody>();
+        rb.AddForce(-RightSpawners[whichSpawner].transform.right + ((RightSpawners[whichSpawner].transform.forward) * 0.1f) * 10f, ForceMode.VelocityChange);
+        */
     }
 }
