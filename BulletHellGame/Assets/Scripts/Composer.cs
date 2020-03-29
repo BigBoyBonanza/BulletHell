@@ -159,7 +159,7 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner1.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
-                sprinklerScipt.GetNum(num);
+                waveScript.SetWave(num);
             }
             if (j == 2)
             {
@@ -227,8 +227,8 @@ public class Composer : MonoBehaviour
                     rb.AddForce(spawner7.transform.forward * 50f, ForceMode.VelocityChange);
                 }
                 */
-                waveScript.SetWave(num);
 
+                sprinklerScipt.GetNum(num);
             }
             if (j == 8)
             {
