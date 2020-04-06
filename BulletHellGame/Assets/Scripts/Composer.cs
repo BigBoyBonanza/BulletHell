@@ -11,26 +11,14 @@ public class Composer : MonoBehaviour
     private string assetContent;
     public static List<string> textArray;
     public int frameIndex = 0;
+    public int frameCap = 0;
 
     public int target = 60;
-
-    public GameObject deathBall;
 
     public AudioSource song;
     int countDown = 3;
     bool cleared = false;
-
-    public GameObject spawner0;
-    public GameObject spawner1;
-    public GameObject spawner2;
-    public GameObject spawner3;
-    public GameObject spawner4;
-    public GameObject spawner5;
-    public GameObject spawner6;
-    public GameObject spawner7;
-    public GameObject spawner8;
-    public GameObject spawner9;
-
+    
     public GameObject Wave;
     private WavesScript waveScript;
 
@@ -43,6 +31,8 @@ public class Composer : MonoBehaviour
     public GameObject Sprink;
     private SprinklerScirpt sprinklerScipt;
 
+    public GameObject Levels;
+    private DebugLevels debugLevelsScript;
 
     void Awake()
     {
@@ -54,6 +44,7 @@ public class Composer : MonoBehaviour
         tideScript = Tide.GetComponent<TideScript>();
         starSpawningScript = Falling.GetComponent<StarSpawningScript>();
         sprinklerScipt = Sprink.GetComponent<SprinklerScirpt>();
+        debugLevelsScript = Levels.GetComponent<DebugLevels>();
     }
 
     private void Start()
@@ -61,8 +52,9 @@ public class Composer : MonoBehaviour
         assetContent = asset.text;
 
         textArray = assetContent.Split('\n').ToList();
+        frameCap = textArray.Count();
         //ReadTheLines();
-        Debug.Log(spawner0.transform.position);
+        //Debug.Log(spawner0.transform.position);
         song.Play();
     }
 
@@ -102,7 +94,10 @@ public class Composer : MonoBehaviour
             */
             yield return new WaitForFixedUpdate();
             ReadALine(frameIndex);
-            frameIndex++;
+            if(frameIndex <= frameCap)
+            {
+                frameIndex++;
+            }
         }
     }
 
@@ -139,120 +134,47 @@ public class Composer : MonoBehaviour
             //high noises to low noises
             if(j == 0)
             {
-                /*
-                if(num > 6)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner0.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner0.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
-
+                debugLevelsScript.SetIntensity1(num);
             }
             if (j == 1)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner1.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner1.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
+                debugLevelsScript.SetIntensity2(num);
                 waveScript.SetWave(num);
             }
             if (j == 2)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner2.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner2.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
+                debugLevelsScript.SetIntensity3(num);
             }
             if (j == 3)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner3.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner3.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
+                debugLevelsScript.SetIntensity4(num);
             }
             if (j == 4)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner4.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner4.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
+                debugLevelsScript.SetIntensity5(num);
             }
             if (j == 5)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner5.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner5.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
-                starSpawningScript.GetNum(num);
+                debugLevelsScript.SetIntensity6(num);
             }
             if (j == 6)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner6.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner6.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
+                debugLevelsScript.SetIntensity7(num);
+                sprinklerScipt.GetNum(num);
             }
             if (j == 7)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner7.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner7.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
-
-                sprinklerScipt.GetNum(num);
+                debugLevelsScript.SetIntensity8(num);
             }
             if (j == 8)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner8.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner8.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
+                debugLevelsScript.SetIntensity9(num);
             }
             if (j == 9)
             {
-                /*
-                if (num > 8)
-                {
-                    GameObject doomSphere = Instantiate(deathBall, spawner9.transform);
-                    Rigidbody rb = doomSphere.GetComponent<Rigidbody>();
-                    rb.AddForce(spawner9.transform.forward * 50f, ForceMode.VelocityChange);
-                }
-                */
-
-                tideScript.SetWave(num);
+                debugLevelsScript.SetIntensity10(num);
+                //tideScript.SetWave(num);
+                starSpawningScript.GetNum(num);
             }
         }
     }
