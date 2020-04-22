@@ -7,7 +7,7 @@ public class TideScript : MonoBehaviour {
 
 
     public float waveScalar = 1;
-    public float waveIntensity;
+    public float waveIntensity = 1;
     
 
 

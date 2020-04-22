@@ -6,7 +6,7 @@ public class WaveCarryScript : MonoBehaviour {
 
     public GameObject nextNode;
 
-    public float waveIntensity;
+    public float waveIntensity = 1;
 
     private WaveCarryScript nextWaveCarryScipt;
 

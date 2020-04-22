@@ -14,7 +14,7 @@ public class WavesScript : MonoBehaviour {
     public float waveScalar = 1;
 
 
-    public float waveIntensity;
+    public float waveIntensity = 1;
 
     private void Awake()
     {

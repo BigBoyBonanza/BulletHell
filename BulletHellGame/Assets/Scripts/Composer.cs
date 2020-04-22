@@ -139,7 +139,7 @@ public class Composer : MonoBehaviour
             if (j == 1)
             {
                 debugLevelsScript.SetIntensity2(num);
-                waveScript.SetWave(num);
+                //waveScript.SetWave(num);
             }
             if (j == 2)
             {
@@ -160,7 +160,7 @@ public class Composer : MonoBehaviour
             if (j == 6)
             {
                 debugLevelsScript.SetIntensity7(num);
-                sprinklerScipt.GetNum(num);
+                //sprinklerScipt.GetNum(num);
             }
             if (j == 7)
             {
@@ -174,7 +174,7 @@ public class Composer : MonoBehaviour
             {
                 debugLevelsScript.SetIntensity10(num);
                 //tideScript.SetWave(num);
-                starSpawningScript.GetNum(num);
+                //starSpawningScript.GetNum(num);
             }
         }
     }

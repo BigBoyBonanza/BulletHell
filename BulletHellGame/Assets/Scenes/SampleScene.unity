@@ -839,6 +839,11 @@ Prefab:
       propertyPath: waveScalar
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114246374008967440, guid: be51366a57ce53f4db3e0abbc05ef508,
+        type: 2}
+      propertyPath: waveIntensity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be51366a57ce53f4db3e0abbc05ef508, type: 2}
   m_IsPrefabParent: 0
@@ -1479,11 +1484,6 @@ Prefab:
     - target: {fileID: 4998625464687200, guid: a2887c1144df32f45908b7f713918192, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114139439840614798, guid: a2887c1144df32f45908b7f713918192,
-        type: 2}
-      propertyPath: waveScalar
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2887c1144df32f45908b7f713918192, type: 2}
