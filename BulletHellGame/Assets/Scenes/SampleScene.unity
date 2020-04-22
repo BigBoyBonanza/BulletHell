@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c9f2fc0e0a10f4fbcf5b3fc4f6e61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asset: {fileID: 4900000, guid: 230b440a7c896264abd6eaae58c6f2af, type: 3}
+  asset: {fileID: 4900000, guid: ee6b5bf8fb244904eb9775eb911dfebe, type: 3}
   frameIndex: 0
   frameCap: 0
   target: 60
@@ -1536,7 +1536,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4ba0ae05f8c3e234896da2e843eaa333, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0900759e43e07d342b6bf63d625a7fc3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

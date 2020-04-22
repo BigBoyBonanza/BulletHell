@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 38
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -365,9 +365,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: f0fbffff00000000
+    m_SelectedIDs: 22100000
+    m_LastClickedID: 4130
+    m_ExpandedIDs: dcfbfffff0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -449,9 +449,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 3, z: -22.54}
+    m_Target: {x: 5.9763856, y: -5.90625, z: 1.0668483}
     speed: 2
-    m_Value: {x: 0, y: 3, z: -22.54}
+    m_Value: {x: 5.9763856, y: -5.90625, z: 1.0668483}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+    m_Value: {x: -0.7071068, y: 0, z: -0, w: -0.7071068}
   m_Size:
     m_Target: 55.046276
     speed: 2
@@ -559,19 +559,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/MashData
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/MashData
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\GitHub\BulletHell\BulletHellGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8c0f0000
-    m_LastClickedID: 3980
+    m_SelectedIDs: 8c0e0000
+    m_LastClickedID: 3724
     m_ExpandedIDs: 00000000f6090000100c0000920c0000400e0000320f0000ac0f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
